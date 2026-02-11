@@ -54,20 +54,20 @@ export class TriangleService {
     const points = [triangle.a, triangle.b, triangle.c];
     const intersectsX = points.some(
       (p) => Math.abs(p.y) < EPSILON
-      && Math.abs(p.z) < EPSILON
-      && Math.abs(p.x) >= distance,
+    && Math.abs(p.z) < EPSILON
+    && Math.abs(p.x) >= distance,
     );
 
     const intersectsY = points.some(
       (p) => Math.abs(p.x) < EPSILON
-      && Math.abs(p.z) < EPSILON
-      && Math.abs(p.y) >= distance,
+    && Math.abs(p.z) < EPSILON
+    && Math.abs(p.y) >= distance,
     );
 
     const intersectsZ = points.some(
       (p) => Math.abs(p.x) < EPSILON
-      && Math.abs(p.y) < EPSILON
-      && Math.abs(p.z) >= distance,
+    && Math.abs(p.y) < EPSILON
+    && Math.abs(p.z) >= distance,
     );
     const count = [intersectsX, intersectsY, intersectsZ].filter(Boolean).length;
 

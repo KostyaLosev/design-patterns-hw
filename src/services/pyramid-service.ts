@@ -68,12 +68,10 @@ export class PyramidService {
     }
 
     const total = points.reduce(
-      (acc, point) => (
-        new Point(
-          acc.x + point.x,
-          acc.y + point.y,
-          acc.z + point.z,
-        )
+      (acc, point) => new Point(
+        acc.x + point.x,
+        acc.y + point.y,
+        acc.z + point.z,
       ),
       new Point(0, 0, 0),
     );
